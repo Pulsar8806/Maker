@@ -3,7 +3,7 @@ from typing import Optional
 import aiohttp
 
 async def generate_logo(text: str, square: Optional[bool] = False ):
-  "To Create Logos. text = What you want to write on the logo. square = If You Want Square Logo Or Not. Returns Telgraph Image Url"
+  "Logo Oluşturmak İçin. text = Logonun üzerine ne yazmak istediğiniz. square = Kare logo isteyip istemediğinizi. Telgraph Image URL'sini döndürür"
   
   try:
     square = str(square).capitalize()
