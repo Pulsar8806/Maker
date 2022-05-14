@@ -9,8 +9,8 @@ app = Client(
   bot_token=BOT_TOKEN
 )
 
-print("[INFO]: STARTING BOT...")
+print("[INFO]: BOTU BAŞLAT...")
 app.start()
 
-print("[INFO]: STARTING AIOHTTP CLIENT")
+print("[INFO]: AIOHTTP ISTEMCISINI BAŞLATILIYOR")
 session = aiohttp.ClientSession()
