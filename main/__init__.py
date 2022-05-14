@@ -12,5 +12,5 @@ app = Client(
 print("[INFO]: BOTU BAŞLAT...")
 app.start()
 
-print("[INFO]: AIOHTTP ISTEMCISINI BAŞLATILIYOR")
+print("[INFO]: AIOHTTP ISTEMCISINI BAŞLATIYOR")
 session = aiohttp.ClientSession()
