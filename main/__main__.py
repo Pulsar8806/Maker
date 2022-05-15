@@ -28,7 +28,7 @@ async def start(bot, message):
 
 @app.on_message(filters.command("help"))
 async def help(bot, message):
-  await message.reply_photo("https://telegra.ph/file/7a98ead33e7b99fd82cc7.jpg",caption=HELP,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="start_menu")]]))
+  await message.reply_photo("https://telegra.ph/file/7a98ead33e7b99fd82cc7.jpg",caption=HELP,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Geri", callback_data="start_menu")]]))
 
 @app.on_message(filters.command("logo") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
@@ -51,7 +51,7 @@ async def logo(bot, message):
     await x.edit("`🔄 Bitti Oluşturuldu... Şimdi Size Gönderiyoruz`")
 
     logo_id = logo.replace("https://telegra.ph//file/","").replace(".jpg","").strip()
-    await message.reply_photo(logo,caption="**🖼 Logo Tarafından Oluşturulan @SohbetDestek**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Dosya Olarak Yükle 📁", callback_data=f"flogo {logo_id}")]]))
+    await message.reply_photo(logo,caption="**🖼 Logo Tasarım @SohbetDestek**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Dosya Olarak Yükle 📁", callback_data=f"flogo {logo_id}")]]))
     await x.delete()
   except FloodWait:
     pass
@@ -85,7 +85,7 @@ async def logo(bot, message):
     
     logo_id = logo.replace("https://telegra.ph//file/","").replace(".jpg","").strip()
     
-    await message.reply_photo(logo,caption="**🖼 Logo Oluşturula Kanal @SohbetDestek**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Dosya Olarak Yükle 📁", callback_data=f"flogo {logo_id}")]]))
+    await message.reply_photo(logo,caption="**🖼 Logo Tasarım Kanalı @SohbetDestek**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Dosya Olarak Yükle 📁", callback_data=f"flogo {logo_id}")]]))
     await x.delete()
   except FloodWait:
     pass
@@ -111,10 +111,10 @@ async def help_menu(_,query):
 async def logo_doc(_,query):
   await query.answer()
   try:
-    x = await query.message.reply_text("`🔄 Logoyu Size Dosya Olarak Gönderme`")
+    x = await query.message.reply_text("`🔄 Logoyu Size Dosya Olarak Gönderiyorum`")
     await query.message.edit_reply_markup(reply_markup=None)
     link = "https://telegra.ph//file/" + query.data.replace("flogo","").strip() + ".jpg"
-    await query.message.reply_document(link,caption="**🖼 Logo Tarafından Oluşturulan @Botdestekgrubu**")
+    await query.message.reply_document(link,caption="**🖼 Logo Tasarım @Botdestekgrubu**")
   except FloodWait:
     pass
   except Exception as e:
