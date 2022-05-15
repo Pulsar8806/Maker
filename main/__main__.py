@@ -24,7 +24,7 @@ HELP = """
 # Komut
 @app.on_message(filters.command("start"))
 async def start(bot, message):
-  await message.reply_photo("https://i.ibb.co/khRz42f/Turkish-Voice.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="Repo", url="https://github.com/TechShreyash/TechZ-Logo-Maker-Bot")]]))
+  await message.reply_photo("https://i.ibb.co/khRz42f/Turkish-Voice.jpg",caption=START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"), InlineKeyboardButton(text="Repo", url="https://t.me/Botdestekgrubu")]]))
 
 @app.on_message(filters.command("help"))
 async def help(bot, message):
@@ -62,7 +62,7 @@ async def logo(bot, message):
       pass
     return await message.reply_text("`❌ Bir Şeyler Ters Gitti...`\n\nBu Hatayı Şurada Bildir: @Botdestekgrubu")
 
-# Square Logo
+# Kare Logo
 @app.on_message(filters.command("logom") & filters.incoming & filters.text & ~filters.forwarded & (
   filters.group | filters.private))
 async def logo(bot, message):
